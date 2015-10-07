@@ -6,6 +6,7 @@
 #include <string>
 #include "Vector3.h"
 #include "Drawable.h"
+#include "Vector4.h"
 
 struct Face
 {
@@ -18,6 +19,9 @@ class OBJObject : public Drawable
 {
     
 protected:
+    
+    Vector4 center = * new Vector4(0,0,0,1);
+
     
     //Storage vectors
     std::vector<Vector3*>* vertices;
@@ -38,6 +42,18 @@ public:
     
     virtual void draw(DrawData&);
     virtual void update(UpdateData&);
+    
+    void moveX();
+    void movex();
+    void movey();
+    void moveY();
+    void movez();
+    void moveZ();
+    void scale(bool);
+    void orbit(float);
+    
+    void reset();
+    void spin(float);
     
 };
 

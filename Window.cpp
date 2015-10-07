@@ -67,10 +67,11 @@ void Window::idleCallback()
     Globals::cube.update(Globals::updateData);
     }
     
-    if (drawCube == true) {
+    if (drawSphere == true) {
         Globals::sphere.move();
         Globals::sphere.update(Globals::updateData);
     }
+    Globals::bear.spin(spinAngle);
 
     //Call the display routine to draw the cube
     displayCallback();
@@ -163,45 +164,146 @@ void Window::processNormalKeys(unsigned char key, int x, int y) {
         exit(0);
     }
     else if(key == 'x'){
-        Globals::cube.movex();
+        if (drawCube == true) {
+            Globals::cube.movex();
+        }
+        else if(drawBunny){
+            Globals::bunny.movex();
+        }
+        else if(drawDragon){
+            Globals::dragon.movex();
+        }
+        else if(drawBear){
+            Globals::bear.movex();
+        }
     }
     else if(key == 'X'){
-        Globals::cube.moveX();
-    }
+        if (drawCube == true) {
+            Globals::cube.moveX();
+        }
+        else if(drawBunny){
+            Globals::bunny.moveX();
+        }
+        else if(drawDragon){
+            Globals::dragon.moveX();
+        }
+        else if(drawBear){
+            Globals::bear.moveX();
+        }    }
     else if(key == 'y'){
-        Globals::cube.movey();
-    }
+        if (drawCube == true) {
+            Globals::cube.movey();
+        }
+        else if(drawBunny){
+            Globals::bunny.movey();
+        }
+        else if(drawDragon){
+            Globals::dragon.movey();
+        }
+        else if(drawBear){
+            Globals::bear.movey();
+        }    }
     else if(key == 'Y'){
-        Globals::cube.moveY();
-    }
+        if (drawCube == true) {
+            Globals::cube.moveY();
+        }
+        else if(drawBunny){
+            Globals::bunny.moveY();
+        }
+        else if(drawDragon){
+            Globals::dragon.moveY();
+        }
+        else if(drawBear){
+            Globals::bear.moveY();
+        }    }
     else if(key == 'z'){
-        Globals::cube.movez();
-    }
+        if (drawCube == true) {
+            Globals::cube.movez();
+        }
+        else if(drawBunny){
+            Globals::bunny.movez();
+        }
+        else if(drawDragon){
+            Globals::dragon.movez();
+        }
+        else if(drawBear){
+            Globals::bear.movez();
+        }    }
     else if(key == 'Z'){
-        Globals::cube.moveZ();
-    }
+        if (drawCube == true) {
+            Globals::cube.moveZ();
+        }
+        else if(drawBunny){
+            Globals::bunny.moveZ();
+        }
+        else if(drawDragon){
+            Globals::dragon.moveZ();
+        }
+        else if(drawBear){
+            Globals::bear.moveZ();
+        }    }
     else if(key == 'o'){
-        Globals::cube.orbit(orbitAngle);
-    }
+        if (drawCube == true) {
+            Globals::cube.orbit(orbitAngle);
+        }
+        else if(drawBunny){
+            Globals::bunny.orbit(orbitAngle);
+        }
+        else if(drawDragon){
+            Globals::dragon.orbit(orbitAngle);
+        }
+        else if(drawBear){
+            Globals::bear.orbit(orbitAngle);
+        }    }
     else if(key == 'O'){
-        Globals::cube.orbit(-orbitAngle);
-    }
+        if (drawCube == true) {
+            Globals::cube.orbit(-orbitAngle);
+        }
+        else if(drawBunny){
+            Globals::bunny.orbit(-orbitAngle);
+        }
+        else if(drawDragon){
+            Globals::dragon.orbit(-orbitAngle);
+        }
+        else if(drawBear){
+            Globals::bear.orbit(-orbitAngle);
+        }    }
     else if(key == 's'){
-        Globals::cube.scale(false);
-    }
+        if (drawCube == true) {
+            Globals::cube.scale(false);
+        }
+        else if(drawBunny){
+            Globals::bunny.scale(false);
+        }
+        else if(drawDragon){
+            Globals::dragon.scale(false);
+        }
+        else if(drawBear){
+            Globals::bear.scale(false);
+        }    }
     else if(key == 'S'){
-        Globals::cube.scale(true);
-    }
+        if (drawCube == true) {
+            Globals::cube.scale(true);
+        }
+        else if(drawBunny){
+            Globals::bunny.scale(true);
+        }
+        else if(drawDragon){
+            Globals::dragon.scale(true);
+        }
+        else if(drawBear){
+            Globals::bear.scale(true);
+        }    }
     else if(key == 'r'){
         if (spinAngle < 0) {
             spinAngle *= -1;
         }
         Globals::cube.reset();
         Globals::sphere.reset();
-		drawCube = true;
-        drawHouse = false;
-        drawSphere = false;
-		drawBear = drawBunny = drawDragon = false;
+
+        Globals::dragon.reset();
+        Globals::bear.reset();
+        Globals::bunny.reset();
 
     }
     else if (key == 'b'){
