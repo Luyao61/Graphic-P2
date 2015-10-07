@@ -260,14 +260,32 @@ void Window::processSpecialKeys(int key, int x, int y) {
         Globals::camera.set(e, d, up);
 		break;
 	case GLUT_KEY_F4:
-		drawBear = true;
+		drawBunny = true;
 		drawCube = false;
 		drawHouse = false;
 		drawSphere = false;
-		drawBunny = drawDragon = false;
+		drawBear = drawDragon = false;
 
 		Globals::camera.reset();
 		break;
+    case GLUT_KEY_F5:
+            drawBear = true;
+            drawCube = false;
+            drawHouse = false;
+            drawSphere = false;
+            drawBunny = drawDragon = false;
+            
+            Globals::camera.reset();
+    break;
+    case GLUT_KEY_F6:
+            drawDragon = true;
+            drawCube = false;
+            drawHouse = false;
+            drawSphere = false;
+            drawBear = drawBunny = false;
+            
+            Globals::camera.reset();
+    break;
 	}
 }
 

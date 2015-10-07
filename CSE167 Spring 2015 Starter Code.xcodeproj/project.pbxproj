@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		09E2CCBF1BC448850013579B /* House.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 09E2CCBD1BC448850013579B /* House.cpp */; settings = {ASSET_TAGS = (); }; };
+		09E2CCBF1BC448850013579B /* House.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 09E2CCBD1BC448850013579B /* House.cpp */; };
 		D40AFA801AD1E2E7008D61CC /* Shader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D40AFA7E1AD1E2E7008D61CC /* Shader.cpp */; };
 		D42FFC311AAFCC9C006F8E9C /* Matrix4.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D42FFC2A1AAFCC9C006F8E9C /* Matrix4.cpp */; };
 		D42FFC321AAFCC9C006F8E9C /* Window.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D42FFC2C1AAFCC9C006F8E9C /* Window.cpp */; };
@@ -44,6 +44,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		097498E11BC4E11600742D07 /* bear.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = bear.obj; sourceTree = SOURCE_ROOT; };
+		097498E21BC4E11600742D07 /* bunny.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = bunny.obj; sourceTree = SOURCE_ROOT; };
+		097498E31BC4E11600742D07 /* dragon.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dragon.obj; sourceTree = SOURCE_ROOT; };
 		09E2CCBD1BC448850013579B /* House.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = House.cpp; sourceTree = SOURCE_ROOT; };
 		09E2CCBE1BC448850013579B /* House.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = House.hpp; sourceTree = SOURCE_ROOT; };
 		D40AFA7E1AD1E2E7008D61CC /* Shader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Shader.cpp; sourceTree = SOURCE_ROOT; };
@@ -122,6 +125,9 @@
 		D42FFC201AAFC90E006F8E9C /* CSE167 Spring 2015 Starter Code */ = {
 			isa = PBXGroup;
 			children = (
+				097498E11BC4E11600742D07 /* bear.obj */,
+				097498E21BC4E11600742D07 /* bunny.obj */,
+				097498E31BC4E11600742D07 /* dragon.obj */,
 				D42FFC631AB67F52006F8E9C /* main.cpp */,
 				D42FFC2C1AAFCC9C006F8E9C /* Window.cpp */,
 				D42FFC301AAFCC9C006F8E9C /* Window.h */,
