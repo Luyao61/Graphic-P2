@@ -19,6 +19,9 @@ float orbitAngle = 0.05;
 bool drawHouse = false;
 bool drawSphere = false;
 bool drawCube = false;
+bool drawBear = false;
+bool drawBunny = false;
+bool drawDragon = false;
 
 void Window::initialize(void)
 {
@@ -123,7 +126,19 @@ void Window::displayCallback()
     if (drawHouse == true) {
         Globals::house.draw(Globals::drawData);
     }
+
+	if (drawBear == true) {
+		Globals::bear.draw(Globals::drawData);
+	}
     
+	if (drawBunny == true) {
+		Globals::bunny.draw(Globals::drawData);
+	}
+	if (drawDragon == true) {
+		Globals::dragon.draw(Globals::drawData);
+	}
+
+
     
     //Pop off the changes we made to the matrix stack this frame
     glPopMatrix();
@@ -186,11 +201,15 @@ void Window::processNormalKeys(unsigned char key, int x, int y) {
 		drawCube = true;
         drawHouse = false;
         drawSphere = false;
+		drawBear = drawBunny = drawDragon = false;
+
     }
     else if (key == 'b'){
         drawSphere = true;
         drawCube = false;
         drawHouse = false;
+		drawBear = drawBunny = drawDragon = false;
+
         Globals::sphere.reset();
     }
 
@@ -209,7 +228,8 @@ void Window::processSpecialKeys(int key, int x, int y) {
 		drawCube = true;
         drawHouse =false;
         drawSphere = false;
-        Globals::camera = * new Camera();
+		drawBear = drawBunny = drawDragon = false;
+        Globals::camera.reset();
         
 
 		break;
@@ -217,6 +237,8 @@ void Window::processSpecialKeys(int key, int x, int y) {
         drawCube = false;
         drawHouse =true;
         drawSphere = false;
+		drawBear = drawBunny = drawDragon = false;
+
             
 		e.set(0, 24.14, 24.14);
 		d.set(0, 0, 0);
@@ -228,12 +250,23 @@ void Window::processSpecialKeys(int key, int x, int y) {
         drawCube = false;
         drawHouse =true;
         drawSphere = false;
+		drawBear = drawBunny = drawDragon = false;
+
             
         e.set(-28.33,11.66, 23.33);
         d.set(-5, 0, 0);
         up.set(0, 1, 0.5);
             
         Globals::camera.set(e, d, up);
+		break;
+	case GLUT_KEY_F4:
+		drawBear = true;
+		drawCube = false;
+		drawHouse = false;
+		drawSphere = false;
+		drawBunny = drawDragon = false;
+
+		Globals::camera.reset();
 		break;
 	}
 }
